@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    background-image: url(img/wallpaper.png);
+    color: #18242e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    height: 70px; 
+    background: #0a0a0a8a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+}
+
+header * {
+    margin: 0; 
+}
+
+.topo-site {
+    margin-top: -40px; 
+}
+
+.menu-desktop {
+    font-size: 20px;
+}
+
+.logo-img img {
+    width: 90px;
+    height: auto;
+    pointer-events: none;
+    margin-top: 20px;
+}
+
+header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 30px; 
+}
+
+header nav ul li a:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    padding: 7px; 
+    border-radius: 10px; 
+}
+
+.interface1 {
+    margin-top: 200px;
+    height: 90%;
+    padding: 20px 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+.titulo-topo {
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 50px;
+    color: #ffffff;
+}
+
+.img-jogo {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.img-jogo img {
+    border: solid 5px #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    display: block;
+    width: 62.5rem;  
+    height: 500px; 
+    object-fit: cover; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img-jogo img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px #ffffffa4;
+}
+
+.imagens-alinhadas {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.imagens-alinhadas div {
+    margin: 0 10px; 
+}
+
+.imagens-alinhadas img {
+    width: 320px; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+
+.imagens-alinhadas img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px #ffffffa4;
+}
+
+.titulo-sobre {
+    margin-top: 300px;
+    height: 50vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    color: #ffffff; 
+}
+
+.titulo-sobre h1 {
+    margin-top: -400px; 
+    font-size: 50px;
+    height: auto;
+    width: auto;
+    text-align: left; 
+    align-self: flex-start; 
+    margin-left: -100px; 
+}
+
+.texto-sobre p {
+    max-width: 800px; 
+    margin: 20px auto; 
+    margin-left: -100px; 
+    text-align: justify; 
+    font-size: 20px;
+    line-height: 1.6; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.texto-sobre::after {
+    content: ''; 
+    display: inline-block;
+    width: 100%; 
+}
+
+.baixar {
+    background: #ffffff; 
+    color: #000000; 
+    padding: 20px 65px; 
+    border: none; 
+    border-radius: 15px;
+    font-size: 16px; 
+    text-decoration: none; 
+    transition: background 0.3s;  
+    margin-top: 30px; 
+    text-align: center; 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+}
+
+.baixar:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6); 
+}
+
+.baixar a {
+    text-decoration: none;
+    color: #000000; 
+    font-weight: bold; 
+}
+
+.baixar a:hover {
+    color: #007BFF; 
+}
+
+.interface2 {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.download {
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center; 
+    margin: 10px 0; 
+}
+
+.descricao-baixar {
+    margin-top: 10px; 
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center; 
+}
+
+.baixar-jogo {
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #d4d4d4;
+    color: #000000;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    display: inline-block; 
+}
+
+.baixar-jogo:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6); 
+}
+
+.baixar-jogo a {
+    text-decoration: none;
+    color: #000000; 
+    font-weight: bold; 
+}
+
+.baixar-jogo a:hover {
+    color: #007BFF; 
+}
+
+.interface3 {
+    margin-top: 100px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 70vh; 
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.entre-contato {
+    color: #ffffff;
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 24px; 
+}
+
+form {
+    max-width: 500px; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border-radius: 10px; 
+    background: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+form input,
+form textarea {
+    max-width: 100%; 
+    padding: 15px; 
+    border: 1px solid #007BFF; 
+    border-radius: 5px; 
+    background: rgba(255, 255, 255, 0.8); 
+    color: #18242e; 
+    margin-bottom: 15px; 
+    font-size: 16px; 
+    transition: border-color 0.3s; 
+    width: 100%; 
+}
+
+form textarea {
+    height: 150px; 
+    resize: vertical; 
+}
+
+form label {
+    color: #ffffff; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    display: block; 
+}
+
+form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff; 
+    color: #000000; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
+    font-weight: bold;
+    display: block; 
+    width: 50%; 
+    font-size: 16px; 
+    margin: 10px auto 0; 
+}
+
+form button:hover {
+    color: #007BFF; 
+    transform: translateY(-2px); 
+}
+
+footer {
+    color: #ffffff; 
+    text-align: center; 
+    padding: 10px 0; 
+
+    position: relative; 
+    margin-top: 50px; 
+}
+
+footer a {
+    color: #007BFF; 
+    text-decoration: none; 
+}

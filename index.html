@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Rocket Attack</title>
+</head>
+<body>
+    <header>
+        <div class="logo-img">
+            <img src="img/Logotipo.png" alt="jogo">
+        </div>
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="#descricao">Descrição</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topo-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="titulo-topo">
+                        <h1>    
+                            Prepare-se para a Corrida Espacial!
+                        </h1>
+                    </div>
+                
+                    <div class="img-jogo">
+                        <img src="img/logo.png" alt="Logo do jogo Rocket Attack" />
+                        <div class="imagens-alinhadas">
+                            <div class="img-jogo1">
+                                <img src="img/1.png" alt="game" />
+                            </div>
+                            <div class="img-jogo2">
+                                <img src="img/2.png" alt="game" />
+                            </div>
+                            <div class="img-jogo3">
+                                <img src="img/3.png" alt="game" />
+                            </div>
+                        </div>
+                        <div class="baixar">
+                            <a href="#download" class="cta-button">Baixar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="descricao" class="sobre"> 
+            <div class="interface1">
+                <div class="flex"> 
+                    <div class="titulo-sobre">
+                        <h1>Descrição do jogo</h1>   
+                        <div class="texto-sobre">
+                            <p>Rocket Attack é um emocionante jogo de corrida de naves espaciais, onde o jogador deve ser mais rápido que os oponentes e completar os percursos desafiadores. Com uma velocidade crescente em cada tentativa, os jogadores enfrentam adversários variados, tornando cada corrida uma nova aventura.</p>
+                            <p>O jogo é leve e seu arquivo executável ocupa pouco espaço, garantindo uma experiência fluida no Windows durante o gameplay. Durante as corridas, um mini-mapa da fase é exibido, ajudando os jogadores a memorizar o percurso e a identificar os pontos ideais para ultrapassagens.</p>
+                            <p>A equipe de desenvolvimento, composta por profissionais experientes, está comprometida em oferecer uma experiência desafiadora e envolvente. Rocket Attack também conta com uma trilha sonora original exclusiva, que complementa a ação intensa das corridas. Venha acelerar e desafiar seus limites no espaço!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="baixar-aqui">
+            <div class="interface2">
+                <div class="flex">
+                    <div class="download">
+                        <h2>Download</h2>
+                    </div>
+                    <div class="descricao-baixar">
+                        <p>O jogo é gratuito e pode ser baixado aqui!</p>
+                    </div>
+                    <div class="baixar-jogo">
+                        <a href="RocketAttack.zip" target="_blank" download>Baixar Rocket Attack</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato" class="contato">
+            <div class="interface3">
+                <div class="entre-contato"><h2>Entre em Contato</h2></div>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+                <footer>
+                    <p>© 2024 Rocket Attack. Todos os direitos reservados.</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
