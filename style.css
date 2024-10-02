@@ -379,6 +379,7 @@ footer a {
 
 
     
+  
 
     .menu-toggle {
         display: none;
@@ -436,7 +437,7 @@ footer a {
     }
     
     .topo-site {
-        height: 60vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -552,6 +553,11 @@ footer a {
         padding: 0 10px;
     }
     
+    .interface2 .flex{
+        margin-top: 5rem;
+        height: 20vh;
+    }
+
     .descricao-baixar {
         margin-top: 1rem;
         font-size: 4vw;
