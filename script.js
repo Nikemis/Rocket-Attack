@@ -13,3 +13,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu-desktop').classList.toggle('active');
+});
+
+document.querySelectorAll('.menu-desktop ul li a').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelector('.menu-desktop').classList.remove('active'); // Fecha o menu ao selecionar
+    });
+});
+

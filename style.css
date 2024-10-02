@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -14,31 +15,42 @@ body {
 }
 
 header {
-    height: 70px; 
+    height: 30px; 
     background: #0a0a0a8a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px; 
+    margin-top: 15px;
 }
 
 header * {
     margin: 0; 
 }
 
-.topo-site {
-    margin-top: -40px; 
+menu-toggle{
+    display:none;
+
+}
+
+.topos-site{
+    height: 100vh;
+}
+
+.topo-site .flex{
+margin-top: auto;
 }
 
 .menu-desktop {
     font-size: 20px;
 }
 
+
 .logo-img img {
     width: 90px;
     height: auto;
     pointer-events: none;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 header a {
@@ -132,35 +144,40 @@ header nav ul li a:hover {
 }
 
 .titulo-sobre {
+    padding-bottom: 500px;
     margin-top: 300px;
     height: 50vh; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    align-items: center; 
+
     text-align: center; 
     color: #ffffff; 
 }
 
 .titulo-sobre h1 {
-    margin-top: -400px; 
+   
     font-size: 50px;
     height: auto;
     width: auto;
     text-align: left; 
-    align-self: flex-start; 
-    margin-left: -100px; 
+    margin-right: 100px; 
+
 }
 
 .texto-sobre p {
-    max-width: 800px; 
-    margin: 20px auto; 
-    margin-left: -100px; 
-    text-align: justify; 
+    max-width: 800px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    text-align: justify;
     font-size: 20px;
-    line-height: 1.6; 
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.interface1 .flex{
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .texto-sobre::after {
@@ -178,9 +195,10 @@ header nav ul li a:hover {
     font-size: 16px; 
     text-decoration: none; 
     transition: background 0.3s;  
-    margin-top: 30px; 
+    margin-top: 10px; 
     text-align: center; 
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    margin-top: 20px;
 }
 
 .baixar:hover {
@@ -300,6 +318,9 @@ form label {
     font-weight: bold; 
     display: block; 
 }
+.menu-toggle {
+    display: none; 
+}
 
 form button {
     padding: 10px;
@@ -334,3 +355,252 @@ footer a {
     color: #007BFF; 
     text-decoration: none; 
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        overflow-x: hidden; 
+    }
+    
+    .flex{
+        display: block;
+        
+    }
+
+    
+
+    header {
+        height: 60px; 
+        background: #0a0a0a8a;
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center;
+        padding: 0 20px; 
+        margin-top: 15px;
+    }
+
+
+    
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .menu-desktop.active {
+        left: 0;
+    }
+    
+    .menu-desktop ul {
+        display: flex;
+        font-size: 4vw;
+        margin-left: 3rem;
+        margin-right: 6rem;
+        text-align: justify;
+    }
+    
+    .menu-desktop ul li {
+        padding: 0 15px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu-desktop {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 10, 10, 0.9);
+        transition: left 0.3s ease;
+        padding-top: 60px;
+        z-index: 1000;
+    }
+    
+    .menu-desktop.active {
+        left: 0;
+    }
+    
+    .menu-desktop ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .menu-desktop ul li {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .topo-site {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .img-jogo {
+        margin-top: 1rem;
+        font-size: 4vw;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        text-align: justify;
+        width: 28rem;
+    }
+    
+    .img-jogo img {
+        border: solid 1px #ffffff;
+        border-radius: 3px;
+    }
+    
+    .titulo-topo,
+    .download h2 {
+        font-size: 3vw;
+    }
+    
+    .logo-img {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .titulo-topo {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    
+    .img-jogo {
+        width: 90%;
+        max-width: 28rem;
+    }
+    
+    .img-jogo img {
+        width: 70%;
+        height: auto;
+    }
+    
+    .imagens-alinhadas img {
+        width: 5rem;
+        height: 90%;
+        margin-top: 1rem;
+        font-size: 4vw;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        text-align: justify;
+    }
+    
+    .cta-button {
+        padding: 40px 3px;
+        font-size: 10px;
+    }
+    
+    .baixar {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 10px 50px;
+    }
+    
+    .baixar a {
+        display: inline-block;
+        font-size: 15px;
+        padding: 1px 3px;
+    }
+    
+    .interface1 .flex {
+        height: 7rem;
+        margin-bottom: 12rem;
+    }
+    
+    .titulo-sobre h1 {
+        margin-top: 1rem;
+        font-size: 7vw;
+        text-align: center;
+        display: block;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+    }
+    
+    .texto-sobre p {
+        margin-top: 1rem;
+        font-size: 4vw;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        text-align: justify;
+    }
+    
+    .download h2 {
+        margin-top: 1rem;
+        font-size: 7vw;
+        text-align: center;
+        display: block;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+    }
+    
+    .descricao-baixar {
+        margin-top: 1rem;
+        font-size: 4vw;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+    
+    .baixar-jogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: #d4d4d4;
+        color: #000000;
+        padding: 15px 30px;
+        text-align: center;
+        border-radius: 10px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 3px;
+    }
+    
+    .entre-contato {
+        margin-top: 1rem;
+        font-size: 6vw;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        text-align: center;
+    }
+    
+    form {
+        margin-top: 1rem;
+        font-size: 4vw;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        text-align: justify;
+    }
+}    
