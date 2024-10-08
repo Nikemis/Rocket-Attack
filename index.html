@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link href="style.css" rel="stylesheet">
-    
     <title>Rocket Attack</title>
 </head>
 <body>
@@ -12,8 +11,9 @@
         <div class="logo-img">
             <img src="img/Logotipo.png" alt="jogo">
         </div>
-        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> <!-- Ícone de menu hambúrguer -->
         <nav class="menu-desktop">
+            <button class="menu-close" aria-label="Fechar Menu">&times;</button> <!-- Ícone de X para fechar -->
             <ul>
                 <li><a href="#descricao">Descrição</a></li>
                 <li><a href="#download">Download</a></li>
@@ -23,37 +23,39 @@
     </header>
     
     <main>
-        <section class="topo-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="titulo-topo">
-                        <h1>    
-                            Prepare-se para a Corrida Espacial!
-                        </h1>
-                    </div>
-                
-                    <div class="img-jogo">
-                        <img src="img/logo.png" alt="Logo do jogo Rocket Attack">
-                        <div class="imagens-alinhadas">
-                            <div class="img-jogo1">
-                                <img src="img/1.png" alt="game">
-                            </div>
-                            <div class="img-jogo2">
-                                <img src="img/2.png" alt="game">
-                            </div>
-                            <div class="img-jogo3">
-                                <img src="img/3.png" alt="game">
-                            </div>
+        <div class="container"> 
+            <section class="topo-site">
+                <div class="interface">
+                    <div class="flex">
+                        <div class="titulo-topo">
+                            <h1>    
+                                Prepare-se para a Corrida Espacial!
+                            </h1>
                         </div>
-                        <div class="baixar">
-                            <a href="#download" class="cta-button">Baixar</a>
+                    
+                        <div class="img-jogo">
+                            <img src="img/logo.png" alt="Logo do jogo Rocket Attack">
+                            <div class="imagens-alinhadas">
+                                <div class="img-jogo1">
+                                    <img src="img/1.png" alt="game">
+                                </div>
+                                <div class="img-jogo2">
+                                    <img src="img/2.png" alt="game">
+                                </div>
+                                <div class="img-jogo3">
+                                    <img src="img/3.png" alt="game">
+                                </div>
+                            </div>
+                            <div class="baixar">
+                                <a href="#download" class="cta-button">Baixar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="descricao" class="sobre"> 
+            </section>
+        </div>
+    <div class="sobre_container">
+        <section id="descricao"> 
             <div class="interface1">
                 <div class="flex"> 
                     <div class="titulo-sobre">
@@ -67,8 +69,12 @@
                 </div>
             </div>
         </section>
+    </div>
 
-        <section id="download" class="baixar-aqui">
+
+
+    <div class="baixar-aqui_container">
+        <section id="download">
             <div class="interface2">
                 <div class="flex">
                     <div class="download">
@@ -83,27 +89,35 @@
                 </div>
             </div>
         </section>
-        
-        <section id="contato" class="contato">
+    </div>       
+
+
+    <div  class="contato_container">
+        <section id="contato">
             <div class="interface3">
-                <div class="entre-contato"><h2>Entre em Contato</h2></div>
-                <form>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+                <div class="flex">
+                    <div class="entre-contato">
+                        <h2>Entre em Contato</h2>
+                    </div>
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
                     
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
                     
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" required></textarea>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
                     
-                    <button type="submit">Enviar</button>
-                </form>
-                <footer>
-                    <p>© 2024 Rocket Attack. Todos os direitos reservados.</p>
-                </footer>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <footer>
+                        <p>© 2024 Rocket Attack. Todos os direitos reservados.</p>
+                    </footer>
+                </div>
             </div>
         </section>
+    </div>    
     </main>
 
     <script src="script.js"></script>

@@ -5,6 +5,24 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
+.container {
+    max-width: 1000px; /* Largura máxima de 1000px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px; /* Padding interno do contêiner */
+}
+
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 body {
     font-size: 16px;
     line-height: 1.4;
@@ -13,6 +31,8 @@ body {
     color: #18242e;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 header {
     height: 30px; 
@@ -145,8 +165,7 @@ header nav ul li a:hover {
 }
 
 .titulo-sobre {
-    padding-bottom: 500px;
-    margin-top: 300px;
+
     height: 50vh; 
     display: flex; 
     flex-direction: column; 
@@ -353,36 +372,42 @@ footer a {
 
 
 
+.menu-toggle {
+    display: none; 
+}
 
-@media screen and (max-width: 768px) {
+.menu-close {
+   display: none;
+}
+
+
+@media screen and (max-width: 384px) {
     
-    body {
-        overflow-x: hidden; 
+
+    .menu-close {
+        position: absolute; 
+        top: 2%; 
+        right: 2%; 
+        background: none; 
+        border: none; 
+        color: #fff; 
+        font-size: 2rem; 
+        cursor: pointer; 
+        transition: transform 0.3s ease; 
     }
     
-    .flex{
-        display: block;
-        
-    }
 
+    .menu-close:hover {
+        transform: scale(1.2); 
+    }
     
 
-    header {
-        height: 60px; 
-        background: #0a0a0a8a;
-        display: flex;
-        justify-content: flex-start; 
-        align-items: center;
-        padding: 0 20px; 
-        margin-top: 15px;
+    .menu-close:focus {
+        outline: none; 
     }
-
-
     
-  
-
     .menu-toggle {
-        display: none;
+        display: block; 
         background: none;
         border: none;
         color: #fff;
@@ -390,218 +415,535 @@ footer a {
         cursor: pointer;
     }
     
+    .menu-desktop {
+        position: fixed;
+        top: 0;
+        left: -100%; 
+        width: 100VW;
+        height: 100%;
+        background-color: rgba(10, 10, 10, 0.9);
+        transition: left 0.3s ease;
+        padding-top: 3.75rem;
+        z-index: 1000;
+    }
+    
     .menu-desktop.active {
-        left: 0;
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(10, 10, 10, 0.9); 
+        z-index: 1000; 
+        overflow-y: auto; 
     }
     
     .menu-desktop ul {
         display: flex;
-        font-size: 4vw;
-        margin-left: 3rem;
-        margin-right: 6rem;
-        text-align: justify;
+        flex-direction: column; 
+        font-size: 4vw; 
+        margin: 0; 
+        padding: 0; 
+        text-align: center; 
+        
     }
     
+
+    .menu-desktop ul li:last-child {
+        border-bottom: none; 
+    }
+
     .menu-desktop ul li {
-        padding: 0 15px;
+        padding: 1.25rem; 
+        text-align: center;
+    }
+    
+    .menu-desktop.active ul {
+        display: flex;  
+        transition: opacity 0.3s ease-in-out; 
+        opacity: 1; 
+    }
+
+    
+    .menu-desktop.active .menu-close {
+        display: block;
+    }
+
+
+    body {
+        font-size: 0.625vw;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .img-jogo img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+    }
+
+    .titulo-topo{
+        font-size: 3vw;
+        margin: 0.5rem;
+        align-items: center;
+        display: flex;
+    }
+
+
+    .baixar {
+        padding:1.5rem 5.5rem;
+      }
+
+    .imagens-alinhadas{
+        display: none;
+    }
+
+
+    .baixar {
+
+        padding: 0.625rem 2.5rem;
+      }
+
+    .sobre_container{
+
+        width: 90%; 
+        margin: 0 auto;
+        padding: 1rem;
+        
+    }
+
+    .sobre_container h1{
+       
+        font-size: 5vw;
+        margin: 0.5rem;
+    }
+    
+
+    .sobre_container p{
+        font-size:3.8vw;
+        margin:0.5rem
+    }
+
+    .interface1{
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .titulo-sobre{
+        display:flex;
+    }
+
+    .baixar-aqui_container{
+        margin:1rem;
+    }
+
+
+    .baixar-aqui_container h2{
+        font-size: 7vw;
+
+    }
+
+    .baixar-aqui_container p {
+        font-size: 4vw;
+    }
+
+    .baixar-jogo {
+        font-size: 3.5vw;
+        padding: 10px 20px;
+        margin: 1rem;
+      }
+
+
+    .contato_container{
+        padding: 2.5rem;
+        margin: 1rem;
+    }
+
+    .entre-contato{
+        font-size: 5vw;
+        margin: 1rem;
+    }
+
+    .entre-contato h2{
+        white-space: pre-line;
+    }
+
+
+    footer{
+        margin: 1rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .menu-close {
+        position: absolute; 
+        top: 2%; 
+        right: 2%; 
+        background: none; 
+        border: none; 
+        color: #fff; 
+        font-size: 2rem; 
+        cursor: pointer; 
+        transition: transform 0.3s ease; 
+    }
+    
+
+    .menu-close:hover {
+        transform: scale(1.2); 
+    }
+    
+
+    .menu-close:focus {
+        outline: none; 
     }
     
     .menu-toggle {
-        display: block;
+        display: block; 
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
     
     .menu-desktop {
         position: fixed;
         top: 0;
-        left: -100%;
-        width: 100%;
+        left: -100%; 
+        width: 100VW;
         height: 100%;
         background-color: rgba(10, 10, 10, 0.9);
         transition: left 0.3s ease;
-        padding-top: 60px;
+        padding-top: 3.75rem;
         z-index: 1000;
     }
     
     .menu-desktop.active {
-        left: 0;
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(10, 10, 10, 0.9); 
+        z-index: 1000; 
+        overflow-y: auto; 
     }
     
     .menu-desktop ul {
-        flex-direction: column;
-        padding: 0;
-    }
-    
-    .menu-desktop ul li {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .topo-site {
-        height: 80vh;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        flex-direction: column; 
+        font-size: 4vw; 
+        margin: 0; 
+        padding: 0; 
+        text-align: center; 
+        
     }
     
-    .img-jogo {
-        margin-top: 1rem;
-        font-size: 4vw;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-        text-align: justify;
-        width: 28rem;
-    }
-    
-    .img-jogo img {
-        border: solid 1px #ffffff;
-        border-radius: 3px;
-    }
-    
-    .titulo-topo,
-    .download h2 {
-        font-size: 3vw;
-    }
-    
-    .logo-img {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .titulo-topo {
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
-    
-    .img-jogo {
-        width: 90%;
-        max-width: 28rem;
-    }
-    
-    .img-jogo img {
-        width: 70%;
-        height: auto;
-    }
-    
-    .imagens-alinhadas img {
-        width: 5rem;
-        height: 90%;
-        margin-top: 1rem;
-        font-size: 4vw;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-        text-align: justify;
-    }
-    
-    .cta-button {
-        padding: 40px 3px;
-        font-size: 10px;
-    }
-    
-    .baixar {
-        text-align: center;
-        margin-top: 3rem;
-        padding: 10px 50px;
-    }
-    
-    .baixar a {
-        display: inline-block;
-        font-size: 15px;
-        padding: 1px 3px;
-    }
-    
-    .interface1 .flex {
-        height: 7rem;
-        margin-bottom: 12rem;
-    }
-    
-    .titulo-sobre h1 {
-        margin-top: 1rem;
-        font-size: 7vw;
-        text-align: center;
-        display: block;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-    }
-    
-    .texto-sobre p {
-        margin-top: 1rem;
-        font-size: 4vw;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-        text-align: justify;
-    }
-    
-    .download h2 {
-        margin-top: 1rem;
-        font-size: 7vw;
-        text-align: center;
-        display: block;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-    }
-    
-    .interface2 .flex{
-        margin-top: 5rem;
-        height: 20vh;
+
+    .menu-desktop ul li:last-child {
+        border-bottom: none; 
     }
 
-    .descricao-baixar {
-        margin-top: 1rem;
-        font-size: 4vw;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
+    .menu-desktop ul li {
+        padding: 1.25rem; 
         text-align: center;
     }
     
-    .baixar-jogo {
+    .menu-desktop.active ul {
+        display: flex;  
+        transition: opacity 0.3s ease-in-out; 
+        opacity: 1; 
+    }
+
+    
+    .menu-desktop.active .menu-close {
+        display: block;
+    }
+    
+    .container {
+        width: 95%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+      }
+
+      
+    body {
+        font-size: 3vw;
+     }
+
+
+ 
+    
+    .container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    }
+      
+    .img-jogo img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .titulo-topo {
+        font-size: 3vw;
+        margin: 0.5rem;
         align-items: center;
-        margin-top: 20px;
-        font-size: 20px;
-        background-color: #d4d4d4;
-        color: #000000;
-        padding: 15px 30px;
-        text-align: center;
-        border-radius: 10px;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px 3px;
+        display: flex;
     }
-    
-    .entre-contato {
-        margin-top: 1rem;
+
+    .titulo-topo h1{
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .imagens-alinhadas {
+        display: none;
+    }
+
+    .baixar {
+        padding: 0.625rem 2.5rem;
+    }
+
+    .sobre_container {
+        width: 95%;
+        margin: 0 auto;
+        margin: 1rem;
+    }
+
+    .sobre_container h1 {
+        font-size: 3.6vw;
+
+    }
+
+    .sobre_container p {
+        font-size: 2.5vw;
+       
+    }
+
+    .baixar-aqui_container {
+        margin: 1rem;
+        width: 95%;
+    }
+
+    .baixar-aqui_container h2 {
         font-size: 6vw;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
+    }
+
+    .baixar-aqui_container p {
+        font-size: 3.5vw;
+    }
+
+    .baixar-jogo {
+        font-size: 3.5vw;
+        padding: 10px 20px;
+        margin: 1rem;
+    }
+
+    .contato_container {
+        padding: 2.5rem;
+        margin: 1rem;
+        width: 95%;
+    }
+
+    .entre-contato {
+        font-size: 4vw;
+        margin: 1rem;
+    }
+
+    footer {
+        margin: 1rem;
+    }
+
+
+}
+
+@media screen and (max-width: 1080px) {
+    
+
+    .menu-close {
+        position: absolute; 
+        top: 2%; 
+        right: 2%; 
+        background: none; 
+        border: none; 
+        color: #fff; 
+        font-size: 2rem; 
+        cursor: pointer; 
+        transition: transform 0.3s ease; 
+    }
+    
+
+    .menu-close:hover {
+        transform: scale(1.2); 
+    }
+    
+
+    .menu-close:focus {
+        outline: none; 
+    }
+    
+    .menu-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .menu-desktop {
+        position: fixed;
+        top: 0;
+        left: -100%; 
+        width: 100VW;
+        height: 100%;
+        background-color: rgba(10, 10, 10, 0.9);
+        transition: left 0.3s ease;
+        padding-top: 3.75rem;
+        z-index: 1000;
+    }
+    
+    .menu-desktop.active {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(10, 10, 10, 0.9); 
+        z-index: 1000; 
+        overflow-y: auto; 
+    }
+    
+    .menu-desktop ul {
+        display: flex;
+        flex-direction: column; 
+        font-size: 4vw; 
+        margin: 0; 
+        padding: 0; 
+        text-align: center; 
+        
+    }
+    
+
+    .menu-desktop ul li:last-child {
+        border-bottom: none; 
+    }
+
+    .menu-desktop ul li {
+        padding: 1.25rem; 
         text-align: center;
     }
     
-    form {
-        margin-top: 1rem;
-        font-size: 4vw;
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 10px;
-        text-align: justify;
+    .menu-desktop.active ul {
+        display: flex;  
+        transition: opacity 0.3s ease-in-out; 
+        opacity: 1; 
     }
-}    
+
+    
+    .menu-desktop.active .menu-close {
+        display: block;
+    }
+    
+    
+    .container {
+        width: 90%; 
+        margin: 0 auto; 
+
+      }
+
+    .titulo-topo {
+        font-size: 3vw;
+        margin: 0.5rem;
+        align-items: center;
+        display: flex;
+     }
+
+     .titulo-topo h1{
+        margin:1rem;
+    }
+
+      .img-jogo img {
+        margin:1rem;
+        object-fit: cover;
+        width: 90%;
+    }
+
+    .imagens-alinhadas img {
+        width: 15rem;
+        height: 14rem;
+      }
+
+      .baixar {
+        padding:1.5rem 5.5rem;
+      }
+
+      .sobre_container {
+         width: 90%; 
+         margin: 0 auto; 
+      }
+
+      .sobre_container h1 {
+        font-size: 5vw;
+      }
+
+    .sobre_container p {
+        font-size: 2.1vw;
+        margin: 0.5rem;
+    }
+    
+    .baixar-aqui_container {
+        width: 90%; 
+        margin: 0 auto; 
+     }
+
+    .baixar-aqui_container h2 {
+        font-size: 6vw;
+      }
+    
+    .baixar-aqui_container p {
+        font-size: 2vw;
+    }
+
+    .baixar-jogo {
+        font-size: 2vw;
+        padding: 1rem 1rem;
+        margin: 1rem;
+      }
+
+    .contato_container {
+        width: 90%; 
+        margin: 0 auto; 
+      }
+
+    .interface3{
+        margin:2rem;
+    }
+
+    .entre-contato {
+        font-size: 3.5vw;
+        margin: 1rem;
+    }
+
+    .entre-contato h2{
+        margin:1rem;
+    }
+
+} 
